@@ -43,6 +43,7 @@
             TBXbuscarmateria.Name = "TBXbuscarmateria";
             TBXbuscarmateria.Size = new Size(466, 31);
             TBXbuscarmateria.TabIndex = 3;
+            TBXbuscarmateria.TextChanged += TBXbuscarmateria_TextChanged;
             // 
             // BTNnuevo
             // 
@@ -111,7 +112,7 @@
             Controls.Add(BTNnuevo);
             Controls.Add(TBXbuscarmateria);
             Controls.Add(label1);
-            ForeColor = Color.White;
+            ForeColor = Color.Black;
             Name = "FrmAlumnos";
             Text = "FrmAlumnos";
             Load += FrmAlumnos_Load;

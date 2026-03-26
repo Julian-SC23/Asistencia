@@ -35,6 +35,7 @@
             DTPpasedelista = new DateTimePicker();
             DGVlista = new DataGridView();
             BTNguardarlista = new Button();
+            LBLporcentaje = new Label();
             ((System.ComponentModel.ISupportInitialize)DGVlista).BeginInit();
             SuspendLayout();
             // 
@@ -97,6 +98,8 @@
             DGVlista.RowHeadersWidth = 62;
             DGVlista.Size = new Size(960, 277);
             DGVlista.TabIndex = 12;
+            DGVlista.CellValueChanged += DGVlista_CellValueChanged;
+            DGVlista.CurrentCellDirtyStateChanged += DGVlista_CurrentCellDirtyStateChanged;
             // 
             // BTNguardarlista
             // 
@@ -110,12 +113,23 @@
             BTNguardarlista.UseVisualStyleBackColor = false;
             BTNguardarlista.Click += BTNguardarlista_Click;
             // 
+            // LBLporcentaje
+            // 
+            LBLporcentaje.AutoSize = true;
+            LBLporcentaje.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            LBLporcentaje.ForeColor = SystemColors.Control;
+            LBLporcentaje.Location = new Point(439, 450);
+            LBLporcentaje.Name = "LBLporcentaje";
+            LBLporcentaje.Size = new Size(0, 26);
+            LBLporcentaje.TabIndex = 14;
+            // 
             // FrmLista
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 46);
             ClientSize = new Size(1055, 511);
+            Controls.Add(LBLporcentaje);
             Controls.Add(BTNguardarlista);
             Controls.Add(DGVlista);
             Controls.Add(DTPpasedelista);
@@ -140,5 +154,6 @@
         private DateTimePicker DTPpasedelista;
         private DataGridView DGVlista;
         private Button BTNguardarlista;
+        private Label LBLporcentaje;
     }
 }

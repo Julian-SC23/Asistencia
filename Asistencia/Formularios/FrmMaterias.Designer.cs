@@ -67,6 +67,7 @@
             BTNeliminar.TabIndex = 11;
             BTNeliminar.Text = "Eliminar";
             BTNeliminar.UseVisualStyleBackColor = false;
+            BTNeliminar.Click += BTNeliminar_Click;
             // 
             // BTNnuevo
             // 
@@ -78,6 +79,7 @@
             BTNnuevo.TabIndex = 10;
             BTNnuevo.Text = "Nuevo";
             BTNnuevo.UseVisualStyleBackColor = false;
+            BTNnuevo.Click += BTNnuevo_Click;
             // 
             // TBXbuscmaterias
             // 
@@ -85,6 +87,7 @@
             TBXbuscmaterias.Name = "TBXbuscmaterias";
             TBXbuscmaterias.Size = new Size(466, 31);
             TBXbuscmaterias.TabIndex = 9;
+            TBXbuscmaterias.TextChanged += TBXbuscmaterias_TextChanged;
             // 
             // label1
             // 

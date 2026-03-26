@@ -1,29 +1,30 @@
 ﻿using Asistencia.Clases;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Asistencia.Formularios
 {
     public partial class FrmLista : Form
     {
+        Datos datos = new Datos();
+
         public FrmLista()
         {
             InitializeComponent();
-
-
         }
-        Datos datos = new Datos();
 
         private void FrmLista_Load(object sender, EventArgs e)
         {
-            DataSet ds = datos.ejecutar("SELECT IdMateria, CONCAT(Clave,' - ',Nombre) AS Desc FROM Materia");
-            CBmaterias.DisplayMember = "Desc";
+            // Solo permite la fecha de hoy
+            DTPpasedelista.Value = DateTime.Today;
+            DTPpasedelista.MinDate = DateTime.Today;
+            DTPpasedelista.MaxDate = DateTime.Today;
+
+            DataSet ds = datos.ejecutar("SELECT IdMateria, CONCAT(Clave,' - ',Nombre) AS Descripcion FROM Materia");
+            if (ds == null || ds.Tables.Count == 0) return;
+            CBmaterias.DisplayMember = "Descripcion";
             CBmaterias.ValueMember = "IdMateria";
             CBmaterias.DataSource = ds.Tables[0];
         }
@@ -42,8 +43,9 @@ namespace Asistencia.Formularios
                 $"JOIN Alumno a ON i.Numcontrol = a.Numcontrol " +
                 $"WHERE i.IdMateria = {idMateria}");
 
-            DGVlista.DataSource = ds.Tables[0];
+            if (ds == null || ds.Tables.Count == 0) return;
 
+            DGVlista.DataSource = ds.Tables[0];
             DGVlista.Columns["IdInscripcion"].Visible = false;
 
             DataGridViewComboBoxColumn colEstado = new DataGridViewComboBoxColumn();
@@ -55,10 +57,50 @@ namespace Asistencia.Formularios
 
             DGVlista.Columns.Remove("Estado");
             DGVlista.Columns.Add(colEstado);
+
+            ActualizarPorcentaje();
+        }
+
+        private void DGVlista_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            ActualizarPorcentaje();
+        }
+
+        private void DGVlista_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (DGVlista.IsCurrentCellDirty)
+                DGVlista.CommitEdit(DataGridViewDataErrorContexts.Commit);
+        }
+
+        private void ActualizarPorcentaje()
+        {
+            int total = DGVlista.Rows.Count;
+            if (total == 0) return;
+
+            int presentes = 0;
+            int ausentes = 0;
+
+            for (int i = 0; i < total; i++)
+            {
+                string estado = DGVlista.Rows[i].Cells["Estado"].Value?.ToString() ?? "Ausente";
+                if (estado == "Presente") presentes++;
+                else ausentes++;
+            }
+
+            double porcentaje = (presentes * 100.0) / total;
+            LBLporcentaje.Text = $"Presentes: {presentes} | Ausentes: {ausentes} | Asistencia del día: {porcentaje:F1}%";
         }
 
         private void BTNguardarlista_Click(object sender, EventArgs e)
         {
+            if (CBmaterias.SelectedValue == null)
+            {
+                MessageBox.Show("Selecciona una materia primero.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string fecha = DTPpasedelista.Value.ToString("yyyy-MM-dd");
 
             for (int i = 0; i < DGVlista.Rows.Count; i++)

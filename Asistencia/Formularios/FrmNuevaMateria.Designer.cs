@@ -28,132 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            BTNCancelar = new Button();
-            BTNguardar = new Button();
-            label6 = new Label();
-            TBXemail = new TextBox();
-            label5 = new Label();
-            TBXmaterno = new TextBox();
-            label4 = new Label();
-            TBXpaterno = new TextBox();
-            label3 = new Label();
-            TBXnombre = new TextBox();
-            label2 = new Label();
-            TBXnumcontrol = new TextBox();
             label1 = new Label();
+            BTNcancelar = new Button();
+            BTNguardar = new Button();
+            label7 = new Label();
+            TBXsemestre = new TextBox();
+            label8 = new Label();
+            TBXgrupo = new TextBox();
+            label9 = new Label();
+            TBXnombre = new TextBox();
+            label10 = new Label();
+            TBXclave = new TextBox();
             SuspendLayout();
-            // 
-            // BTNCancelar
-            // 
-            BTNCancelar.BackColor = Color.Red;
-            BTNCancelar.ForeColor = Color.Black;
-            BTNCancelar.Location = new Point(281, 377);
-            BTNCancelar.Name = "BTNCancelar";
-            BTNCancelar.Size = new Size(112, 34);
-            BTNCancelar.TabIndex = 32;
-            BTNCancelar.Text = "Cancelar";
-            BTNCancelar.UseVisualStyleBackColor = false;
-            // 
-            // BTNguardar
-            // 
-            BTNguardar.BackColor = Color.Lime;
-            BTNguardar.ForeColor = Color.Black;
-            BTNguardar.Location = new Point(128, 375);
-            BTNguardar.Name = "BTNguardar";
-            BTNguardar.Size = new Size(112, 34);
-            BTNguardar.TabIndex = 31;
-            BTNguardar.Text = "Guardar";
-            BTNguardar.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label6.ForeColor = SystemColors.Control;
-            label6.Location = new Point(55, 320);
-            label6.Name = "label6";
-            label6.Size = new Size(81, 26);
-            label6.TabIndex = 30;
-            label6.Text = "Email:";
-            // 
-            // TBXemail
-            // 
-            TBXemail.Location = new Point(142, 315);
-            TBXemail.Name = "TBXemail";
-            TBXemail.Size = new Size(333, 31);
-            TBXemail.TabIndex = 29;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(55, 265);
-            label5.Name = "label5";
-            label5.Size = new Size(152, 26);
-            label5.TabIndex = 28;
-            label5.Text = "Ap. Materno:";
-            // 
-            // TBXmaterno
-            // 
-            TBXmaterno.Location = new Point(213, 263);
-            TBXmaterno.Name = "TBXmaterno";
-            TBXmaterno.Size = new Size(262, 31);
-            TBXmaterno.TabIndex = 27;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label4.ForeColor = SystemColors.Control;
-            label4.Location = new Point(55, 210);
-            label4.Name = "label4";
-            label4.Size = new Size(144, 26);
-            label4.TabIndex = 26;
-            label4.Text = "Ap. Paterno:";
-            // 
-            // TBXpaterno
-            // 
-            TBXpaterno.Location = new Point(205, 208);
-            TBXpaterno.Name = "TBXpaterno";
-            TBXpaterno.Size = new Size(270, 31);
-            TBXpaterno.TabIndex = 25;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(55, 155);
-            label3.Name = "label3";
-            label3.Size = new Size(103, 26);
-            label3.TabIndex = 24;
-            label3.Text = "Nombre:";
-            // 
-            // TBXnombre
-            // 
-            TBXnombre.Location = new Point(164, 153);
-            TBXnombre.Name = "TBXnombre";
-            TBXnombre.Size = new Size(311, 31);
-            TBXnombre.TabIndex = 23;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(55, 100);
-            label2.Name = "label2";
-            label2.Size = new Size(185, 26);
-            label2.TabIndex = 22;
-            label2.Text = "Num. de control:";
-            // 
-            // TBXnumcontrol
-            // 
-            TBXnumcontrol.Location = new Point(246, 98);
-            TBXnumcontrol.Name = "TBXnumcontrol";
-            TBXnumcontrol.Size = new Size(229, 31);
-            TBXnumcontrol.TabIndex = 21;
             // 
             // label1
             // 
@@ -166,45 +52,137 @@
             label1.TabIndex = 20;
             label1.Text = "NUEVA MATERIA";
             // 
+            // BTNcancelar
+            // 
+            BTNcancelar.BackColor = Color.Red;
+            BTNcancelar.ForeColor = Color.Transparent;
+            BTNcancelar.Location = new Point(271, 327);
+            BTNcancelar.Name = "BTNcancelar";
+            BTNcancelar.Size = new Size(112, 34);
+            BTNcancelar.TabIndex = 42;
+            BTNcancelar.Text = "Cancelar";
+            BTNcancelar.UseVisualStyleBackColor = false;
+            BTNcancelar.Click += BTNcancelar_Click;
+            // 
+            // BTNguardar
+            // 
+            BTNguardar.BackColor = Color.Lime;
+            BTNguardar.ForeColor = Color.Transparent;
+            BTNguardar.Location = new Point(118, 325);
+            BTNguardar.Name = "BTNguardar";
+            BTNguardar.Size = new Size(112, 34);
+            BTNguardar.TabIndex = 41;
+            BTNguardar.Text = "Guardar";
+            BTNguardar.UseVisualStyleBackColor = false;
+            BTNguardar.Click += BTNguardar_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label7.ForeColor = SystemColors.Control;
+            label7.Location = new Point(51, 260);
+            label7.Name = "label7";
+            label7.Size = new Size(113, 26);
+            label7.TabIndex = 40;
+            label7.Text = "Semestre:";
+            // 
+            // TBXsemestre
+            // 
+            TBXsemestre.Location = new Point(209, 258);
+            TBXsemestre.Name = "TBXsemestre";
+            TBXsemestre.Size = new Size(262, 31);
+            TBXsemestre.TabIndex = 39;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label8.ForeColor = SystemColors.Control;
+            label8.Location = new Point(51, 205);
+            label8.Name = "label8";
+            label8.Size = new Size(87, 26);
+            label8.TabIndex = 38;
+            label8.Text = "Grupo:";
+            // 
+            // TBXgrupo
+            // 
+            TBXgrupo.Location = new Point(201, 203);
+            TBXgrupo.Name = "TBXgrupo";
+            TBXgrupo.Size = new Size(270, 31);
+            TBXgrupo.TabIndex = 37;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label9.ForeColor = SystemColors.Control;
+            label9.Location = new Point(51, 150);
+            label9.Name = "label9";
+            label9.Size = new Size(103, 26);
+            label9.TabIndex = 36;
+            label9.Text = "Nombre:";
+            // 
+            // TBXnombre
+            // 
+            TBXnombre.Location = new Point(160, 148);
+            TBXnombre.Name = "TBXnombre";
+            TBXnombre.Size = new Size(311, 31);
+            TBXnombre.TabIndex = 35;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label10.ForeColor = SystemColors.Control;
+            label10.Location = new Point(51, 95);
+            label10.Name = "label10";
+            label10.Size = new Size(78, 26);
+            label10.TabIndex = 34;
+            label10.Text = "Clave:";
+            // 
+            // TBXclave
+            // 
+            TBXclave.Location = new Point(160, 93);
+            TBXclave.Name = "TBXclave";
+            TBXclave.Size = new Size(311, 31);
+            TBXclave.TabIndex = 33;
+            // 
             // FrmNuevaMateria
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 36);
-            ClientSize = new Size(540, 450);
-            Controls.Add(BTNCancelar);
+            ClientSize = new Size(533, 393);
+            Controls.Add(BTNcancelar);
             Controls.Add(BTNguardar);
-            Controls.Add(label6);
-            Controls.Add(TBXemail);
-            Controls.Add(label5);
-            Controls.Add(TBXmaterno);
-            Controls.Add(label4);
-            Controls.Add(TBXpaterno);
-            Controls.Add(label3);
+            Controls.Add(label7);
+            Controls.Add(TBXsemestre);
+            Controls.Add(label8);
+            Controls.Add(TBXgrupo);
+            Controls.Add(label9);
             Controls.Add(TBXnombre);
-            Controls.Add(label2);
-            Controls.Add(TBXnumcontrol);
+            Controls.Add(label10);
+            Controls.Add(TBXclave);
             Controls.Add(label1);
             Name = "FrmNuevaMateria";
             Text = "FrmNuevaMateria";
+            Load += FrmNuevaMateria_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button BTNCancelar;
-        private Button BTNguardar;
-        private Label label6;
-        private TextBox TBXemail;
-        private Label label5;
-        private TextBox TBXmaterno;
-        private Label label4;
-        private TextBox TBXpaterno;
-        private Label label3;
-        private TextBox TBXnombre;
-        private Label label2;
-        private TextBox TBXnumcontrol;
         private Label label1;
+        private Button BTNcancelar;
+        private Button BTNguardar;
+        private Label label7;
+        private TextBox TBXsemestre;
+        private Label label8;
+        private TextBox TBXgrupo;
+        private Label label9;
+        private TextBox TBXnombre;
+        private Label label10;
+        private TextBox TBXclave;
     }
 }

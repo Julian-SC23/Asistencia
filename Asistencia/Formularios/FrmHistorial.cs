@@ -27,8 +27,8 @@ namespace Asistencia.Formularios
 
         private void FrmHistorial_Load(object sender, EventArgs e)
         {
-            DataSet ds = datos.ejecutar("SELECT IdMateria, CONCAT(Clave,' - ',Nombre) AS Desc FROM Materia");
-            CBhistorial.DisplayMember = "Desc";
+            DataSet ds = datos.ejecutar("SELECT IdMateria, CONCAT(Clave,' - ',Nombre) AS Descripcion FROM Materia");
+            CBhistorial.DisplayMember = "Descripcion";
             CBhistorial.ValueMember = "IdMateria";
             CBhistorial.DataSource = ds.Tables[0];
         }

@@ -22,21 +22,43 @@ namespace Asistencia.Clases
 
         public DataSet ejecutar(string comando)
         {
-            Conectar();
-            MySqlDataAdapter da = new MySqlDataAdapter(comando, conexion);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            Desconectar();
-            return ds;
+            try
+            {
+                Conectar();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando, conexion);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                Desconectar();
+            }
         }
 
         public bool ejecutarComando(string comando)
         {
-            Conectar();
-            MySqlCommand cmd = new MySqlCommand(comando, conexion);
-            cmd.ExecuteNonQuery();
-            Desconectar();
-            return true;
+            try
+            {
+                Conectar();
+                MySqlCommand cmd = new MySqlCommand(comando, conexion);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                Desconectar();
+            }
         }
     }
 }

@@ -18,7 +18,6 @@ namespace Asistencia.Formularios
         }
 
 
-
         private void FrmAlumnos_Load(object sender, EventArgs e)
         {
             Buscar();
@@ -64,6 +63,11 @@ namespace Asistencia.Formularios
         {
             FrmNuevoAlumno frm = new FrmNuevoAlumno();
             frm.ShowDialog();
+            Buscar();
+        }
+
+        private void TBXbuscarmateria_TextChanged(object sender, EventArgs e)
+        {
             Buscar();
         }
     }

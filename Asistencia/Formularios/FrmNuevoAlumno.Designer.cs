@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            label2 = new Label();
-            TBXclave = new TextBox();
-            label3 = new Label();
-            TBXnombre = new TextBox();
-            label4 = new Label();
-            TBXgrupo = new TextBox();
-            label5 = new Label();
-            TBXsemestre = new TextBox();
             BTNCancelar = new Button();
             BTNguardar = new Button();
+            label6 = new Label();
+            TBXemail = new TextBox();
+            label5 = new Label();
+            TBXmaterno = new TextBox();
+            label4 = new Label();
+            TBXpaterno = new TextBox();
+            label3 = new Label();
+            TBXnombre = new TextBox();
+            label2 = new Label();
+            TBXnumcontrol = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -52,120 +54,138 @@
             label1.TabIndex = 3;
             label1.Text = "NUEVO ALUMNO";
             // 
-            // label2
+            // BTNCancelar
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(52, 83);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 26);
-            label2.TabIndex = 9;
-            label2.Text = "Clave:";
+            BTNCancelar.BackColor = Color.Red;
+            BTNCancelar.ForeColor = Color.Black;
+            BTNCancelar.Location = new Point(280, 348);
+            BTNCancelar.Name = "BTNCancelar";
+            BTNCancelar.Size = new Size(112, 34);
+            BTNCancelar.TabIndex = 44;
+            BTNCancelar.Text = "Cancelar";
+            BTNCancelar.UseVisualStyleBackColor = false;
+            BTNCancelar.Click += BTNCancelar_Click_1;
             // 
-            // TBXclave
+            // BTNguardar
             // 
-            TBXclave.Location = new Point(161, 81);
-            TBXclave.Name = "TBXclave";
-            TBXclave.Size = new Size(311, 31);
-            TBXclave.TabIndex = 8;
-            TBXclave.TextChanged += TBXnumcontrol_TextChanged;
+            BTNguardar.BackColor = Color.Lime;
+            BTNguardar.ForeColor = Color.Black;
+            BTNguardar.Location = new Point(127, 346);
+            BTNguardar.Name = "BTNguardar";
+            BTNguardar.Size = new Size(112, 34);
+            BTNguardar.TabIndex = 43;
+            BTNguardar.Text = "Guardar";
+            BTNguardar.UseVisualStyleBackColor = false;
+            BTNguardar.Click += BTNguardar_Click_1;
             // 
-            // label3
+            // label6
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(52, 138);
-            label3.Name = "label3";
-            label3.Size = new Size(103, 26);
-            label3.TabIndex = 11;
-            label3.Text = "Nombre:";
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label6.ForeColor = SystemColors.Control;
+            label6.Location = new Point(54, 291);
+            label6.Name = "label6";
+            label6.Size = new Size(81, 26);
+            label6.TabIndex = 42;
+            label6.Text = "Email:";
             // 
-            // TBXnombre
+            // TBXemail
             // 
-            TBXnombre.Location = new Point(161, 136);
-            TBXnombre.Name = "TBXnombre";
-            TBXnombre.Size = new Size(311, 31);
-            TBXnombre.TabIndex = 10;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label4.ForeColor = SystemColors.Control;
-            label4.Location = new Point(52, 193);
-            label4.Name = "label4";
-            label4.Size = new Size(87, 26);
-            label4.TabIndex = 13;
-            label4.Text = "Grupo:";
-            label4.Click += label4_Click;
-            // 
-            // TBXgrupo
-            // 
-            TBXgrupo.Location = new Point(202, 191);
-            TBXgrupo.Name = "TBXgrupo";
-            TBXgrupo.Size = new Size(270, 31);
-            TBXgrupo.TabIndex = 12;
+            TBXemail.Location = new Point(141, 286);
+            TBXemail.Name = "TBXemail";
+            TBXemail.Size = new Size(333, 31);
+            TBXemail.TabIndex = 41;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(52, 248);
+            label5.Location = new Point(54, 236);
             label5.Name = "label5";
-            label5.Size = new Size(113, 26);
-            label5.TabIndex = 15;
-            label5.Text = "Semestre:";
+            label5.Size = new Size(152, 26);
+            label5.TabIndex = 40;
+            label5.Text = "Ap. Materno:";
             // 
-            // TBXsemestre
+            // TBXmaterno
             // 
-            TBXsemestre.Location = new Point(210, 246);
-            TBXsemestre.Name = "TBXsemestre";
-            TBXsemestre.Size = new Size(262, 31);
-            TBXsemestre.TabIndex = 14;
+            TBXmaterno.Location = new Point(212, 234);
+            TBXmaterno.Name = "TBXmaterno";
+            TBXmaterno.Size = new Size(262, 31);
+            TBXmaterno.TabIndex = 39;
             // 
-            // BTNCancelar
+            // label4
             // 
-            BTNCancelar.BackColor = Color.Red;
-            BTNCancelar.ForeColor = Color.Transparent;
-            BTNCancelar.Location = new Point(272, 315);
-            BTNCancelar.Name = "BTNCancelar";
-            BTNCancelar.Size = new Size(112, 34);
-            BTNCancelar.TabIndex = 19;
-            BTNCancelar.Text = "Cancelar";
-            BTNCancelar.UseVisualStyleBackColor = false;
-            BTNCancelar.Click += BTNCancelar_Click;
+            label4.AutoSize = true;
+            label4.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label4.ForeColor = SystemColors.Control;
+            label4.Location = new Point(54, 181);
+            label4.Name = "label4";
+            label4.Size = new Size(144, 26);
+            label4.TabIndex = 38;
+            label4.Text = "Ap. Paterno:";
             // 
-            // BTNguardar
+            // TBXpaterno
             // 
-            BTNguardar.BackColor = Color.Lime;
-            BTNguardar.ForeColor = Color.Transparent;
-            BTNguardar.Location = new Point(119, 313);
-            BTNguardar.Name = "BTNguardar";
-            BTNguardar.Size = new Size(112, 34);
-            BTNguardar.TabIndex = 18;
-            BTNguardar.Text = "Guardar";
-            BTNguardar.UseVisualStyleBackColor = false;
-            BTNguardar.Click += BTNguardar_Click;
+            TBXpaterno.Location = new Point(204, 179);
+            TBXpaterno.Name = "TBXpaterno";
+            TBXpaterno.Size = new Size(270, 31);
+            TBXpaterno.TabIndex = 37;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(54, 126);
+            label3.Name = "label3";
+            label3.Size = new Size(103, 26);
+            label3.TabIndex = 36;
+            label3.Text = "Nombre:";
+            // 
+            // TBXnombre
+            // 
+            TBXnombre.Location = new Point(163, 124);
+            TBXnombre.Name = "TBXnombre";
+            TBXnombre.Size = new Size(311, 31);
+            TBXnombre.TabIndex = 35;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(54, 71);
+            label2.Name = "label2";
+            label2.Size = new Size(185, 26);
+            label2.TabIndex = 34;
+            label2.Text = "Num. de control:";
+            // 
+            // TBXnumcontrol
+            // 
+            TBXnumcontrol.Location = new Point(245, 69);
+            TBXnumcontrol.Name = "TBXnumcontrol";
+            TBXnumcontrol.Size = new Size(229, 31);
+            TBXnumcontrol.TabIndex = 33;
             // 
             // FrmNuevoAlumno
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 46);
-            ClientSize = new Size(532, 395);
+            ClientSize = new Size(541, 441);
             Controls.Add(BTNCancelar);
             Controls.Add(BTNguardar);
+            Controls.Add(label6);
+            Controls.Add(TBXemail);
             Controls.Add(label5);
-            Controls.Add(TBXsemestre);
+            Controls.Add(TBXmaterno);
             Controls.Add(label4);
-            Controls.Add(TBXgrupo);
+            Controls.Add(TBXpaterno);
             Controls.Add(label3);
             Controls.Add(TBXnombre);
             Controls.Add(label2);
-            Controls.Add(TBXclave);
+            Controls.Add(TBXnumcontrol);
             Controls.Add(label1);
             Name = "FrmNuevoAlumno";
             Text = "FrmNuevoAlumno";
@@ -176,15 +196,17 @@
         #endregion
 
         private Label label1;
-        private Label label2;
-        private TextBox TBXclave;
-        private Label label3;
-        private TextBox TBXnombre;
-        private Label label4;
-        private TextBox TBXgrupo;
-        private Label label5;
-        private TextBox TBXsemestre;
         private Button BTNCancelar;
         private Button BTNguardar;
+        private Label label6;
+        private TextBox TBXemail;
+        private Label label5;
+        private TextBox TBXmaterno;
+        private Label label4;
+        private TextBox TBXpaterno;
+        private Label label3;
+        private TextBox TBXnombre;
+        private Label label2;
+        private TextBox TBXnumcontrol;
     }
 }

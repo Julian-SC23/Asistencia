@@ -17,17 +17,12 @@ namespace Asistencia.Formularios
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void BTNguardar_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void BTNguardar_Click(object sender, EventArgs e)
-        {
-            string nc = TBXclave.Text.Trim();
+            string nc = TBXnumcontrol.Text.Trim();
             string nom = TBXnombre.Text.Trim();
-            string app = TBXgrupo.Text.Trim();
-            string apm = TBXsemestre.Text.Trim();
+            string app = TBXpaterno.Text.Trim();
+            string apm = TBXmaterno.Text.Trim();
             string mail = TBXemail.Text.Trim();
 
             if (nc == "" || nom == "" || app == "")
@@ -52,14 +47,9 @@ namespace Asistencia.Formularios
             }
         }
 
-        private void BTNCancelar_Click(object sender, EventArgs e)
+        private void BTNCancelar_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void TBXnumcontrol_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
