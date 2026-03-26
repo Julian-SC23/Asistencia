@@ -17,7 +17,6 @@ namespace Asistencia.Formularios
 
         private void FrmLista_Load(object sender, EventArgs e)
         {
-            // Solo permite la fecha de hoy
             DTPpasedelista.Value = DateTime.Today;
             DTPpasedelista.MinDate = DateTime.Today;
             DTPpasedelista.MaxDate = DateTime.Today;
@@ -75,7 +74,7 @@ namespace Asistencia.Formularios
 
         private void ActualizarPorcentaje()
         {
-            int total = DGVlista.Rows.Count;
+            int total = DGVlista.Rows.Count -1;
             if (total == 0) return;
 
             int presentes = 0;

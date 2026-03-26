@@ -71,11 +71,11 @@ namespace Asistencia.Formularios
 
                 Color color;
                 if (pct >= minimo)
-                    color = Color.FromArgb(40, 90, 40);        // verde
+                    color = Color.FromArgb(40, 90, 40);        
                 else if (pct >= minimo - 10)
-                    color = Color.FromArgb(120, 90, 0);        // amarillo
+                    color = Color.FromArgb(120, 90, 0);        
                 else
-                    color = Color.FromArgb(120, 30, 30);       // rojo
+                    color = Color.FromArgb(120, 30, 30);       
 
                 DGVresumen.Rows[i].DefaultCellStyle.BackColor = color;
                 DGVresumen.Rows[i].DefaultCellStyle.ForeColor = Color.White;
